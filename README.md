@@ -1,6 +1,6 @@
 # Windows Admin Center Docker
 
-Ce conteneur permet de tester Windows Admin Center en quelques minutes. On peut ajouter des extensions, se connecter à des serveurs avec le compte local ou du domaine.
+Ce conteneur permet de tester Windows Admin Center en quelques minutes. On peut ajouter des extensions, se connecter à des serveurs avec le compte local ou celui de votre domaine.
 
 # Construire l'image
 
