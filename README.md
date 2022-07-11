@@ -8,11 +8,11 @@ Ce conteneur permet de tester Windows Admin Center en quelques minutes. On peut 
  
 Cette image a été construit depuis l'image mcr.microsoft.com/windows/servercore:ltsc2019.
 
-Vous pouvez à tout moment modifier l'image avec les commandes de l'image parent.
+Vous pouvez à tout moment modifier l'image avec les commandes de l'image parente.
 
 # Variables disponible
 
-Avec les deux variables suivante vous pouvez créer un utiisateurs administrateur.
+Avec les deux variables suivante vous pouvez créer un utilisateur administrateur.
 
 wacuser = user
 
