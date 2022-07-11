@@ -4,4 +4,4 @@ Ce conteneur permet de tester Windows Admin Center en quelques minutes. On peux 
 
 # Construire l'image
 
-docker build -t  Ninapepite/WindowsAdminCenter .
+ ```docker build -t  Ninapepite/WindowsAdminCenter .```
