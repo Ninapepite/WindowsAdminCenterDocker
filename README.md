@@ -10,7 +10,7 @@ Ce conteneur a été construit avec l'image mcr.microsoft.com/windows/servercore
 
 Vous pouvez à tout moment modifier l'image avec les commandes de l'image parent.
 
-# Variable Disponible
+# Variables disponible
 
 Avec les deux variables suivante vous pouvez créer un utiisateurs administrateur.
 
@@ -20,3 +20,5 @@ wacuser = user
 wacpassword = password
 
  ```docker run -d -p 443:443 -e wacuser=Ninapepite -e wacpassword=Azerty123@ Ninapepite/WindowsAdminCenter ```
+ 
+ Rendez-vous sur https://localhost:443 pour acceder à votre conteneur.
