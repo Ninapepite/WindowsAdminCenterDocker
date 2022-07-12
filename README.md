@@ -2,6 +2,10 @@
 
 Ce conteneur permet de tester Windows Admin Center en quelques minutes. On peut ajouter des extensions, se connecter à des serveurs avec le compte local ou celui de votre domaine.
 
+# Docker Hub
+
+https://hub.docker.com/r/ninapepite/windowsadmincenter
+
 # Construire l'image
 
  ```docker build -t  ninapepite/windowsadmincenter .```
