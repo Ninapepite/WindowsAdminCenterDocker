@@ -4,7 +4,7 @@ Ce conteneur permet de tester Windows Admin Center en quelques minutes. On peut 
 
 # Construire l'image
 
- ```docker build -t  Ninapepite/WindowsAdminCenter .```
+ ```docker build -t  ninapepite/windowsadmincenter .```
  
 Cette image a été construit depuis l'image mcr.microsoft.com/windows/servercore:ltsc2019.
 
