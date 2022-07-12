@@ -21,5 +21,5 @@ wacpassword = password
 
  ```docker run -d -p 443:443 -e wacuser=Ninapepite -e wacpassword=Azerty123@ ninapepite/windowsadmincenter ```
  
- Rendez-vous sur https://localhost:443 pour acceder à votre conteneur avec vos identifiants.
+ Rendez-vous sur https://localhost:443 pour accéder à votre conteneur avec vos identifiants.
 
