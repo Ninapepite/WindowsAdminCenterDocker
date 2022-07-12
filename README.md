@@ -12,7 +12,7 @@ Vous pouvez à tout moment modifier l'image avec les commandes de l'image parent
 
 # Variables disponible
 
-Avec les deux variables suivante vous pouvez créer un utilisateur administrateur.
+Avec les deux variables suivante vous pouvez créer un compte administrateur.
 
 wacuser = user
 
