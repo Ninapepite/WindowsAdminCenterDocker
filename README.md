@@ -10,11 +10,11 @@ https://hub.docker.com/r/ninapepite/windowsadmincenter
 
  ```docker build -t  ninapepite/windowsadmincenter .```
  
-Cette image a été construit depuis l'image mcr.microsoft.com/windows/servercore:ltsc2019.
+Cette image a été construite depuis l'image mcr.microsoft.com/windows/servercore:ltsc2019.
 
 Vous pouvez à tout moment modifier l'image avec les commandes de l'image parente.
 
-# Variables disponible
+# Variables disponibles
 
 Avec les deux variables suivante vous pouvez créer un compte administrateur.
 
