@@ -15,7 +15,7 @@ WORKDIR /
 RUN powershell.exe -command \
     Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/p/?linkid=2194936' -OutFile 'c:\wac.msi' ; \
     Start-Process c:\wac.msi -ArgumentList '/qn /L*v c:\log.txt SME_PORT=443 SSL_CERTIFICATE_OPTION=generate TRANSFORMS=wac-install.mst' -Wait ; \
-    Remove-Item -Force 'c:\wac.msi' \
+    Remove-Item -Force 'c:\wac.msi'
 #Prise en charge des certificats X.509
 RUN .\activetls.ps1
 #Vérification que WaC répond
