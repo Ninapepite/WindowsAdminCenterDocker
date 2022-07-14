@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/windows/servercore:ltsc2019
 #Déclaration des variables pour l'ajout d'un compte administrateur
 ENV wacuser="_" \
-    wacpassword="_" \
+    wacpassword="_"
 #Déclaration du shell utilisé
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 #Copie du fichier de configuration de Windows Admin Center
