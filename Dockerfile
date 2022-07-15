@@ -1,5 +1,5 @@
 #On choisit une version de windows server
-FROM mcr.microsoft.com/windows/servercore:ltsc2022
+FROM mcr.microsoft.com/windows/servercore:ltsc2019
 #Déclaration des variables pour l'ajout d'un compte administrateur
 ENV wacuser="_" \
     wacpassword="_"
