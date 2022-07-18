@@ -1,9 +1,10 @@
 # Windows Admin Center Docker
 
 C'est deux images permettent de déployer Windows Admin Center dans un conteneur.
-La version placée dans le dossier Dev permet de lancer WaC en peu de temps mais vous ne pouvez pas lier de volumes persistants.
 
-La version placée dans le dossier persistant vous permet de déployer WaC en gardant votre configuration dans vos volumes.
+La version placée dans le dossier Dev permet de lancer WaC en peu de temps mais vous ne pouvez pas garder votre configuration au redémarrage du conteneur
+
+La version placée dans le dossier persistant vous permet de déployer WaC en hébergant votre configuration dans vos volumes sur l'hôte.
 
 # Construire l'image
 
