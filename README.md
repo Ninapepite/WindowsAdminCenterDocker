@@ -1,23 +1,22 @@
 # Windows Admin Center Docker
 
-Ce conteneur permet de déployer Windows Admin Center en quelques minutes.
+C'est deux images permettent de déployer Windows Admin Center dans un conteneur.
+La version placée dans le dossier Dev permet de lancer WaC en peu de temps mais vous ne pouvez pas lier de volumes persistants.
 
-Cette version de WaC à les mêmes fonction que la version Windows Server classic.
-
-Vous pouvez ajouter des machines par le noms ou l'ip et vous connecter avec un compte local ou celui de votre domaine.
-
-
-# Docker Hub
-
-https://hub.docker.com/r/ninapepite/windowsadmincenter
+La version placée dans le dossier persistant vous permet de déployer WaC en gardant votre configuration dans vos volumes.
 
 # Construire l'image
 
- ```docker build -t  ninapepite/windowsadmincenter .```
- 
-Cette image a été construite depuis l'image mcr.microsoft.com/windows/servercore:ltsc2019.
+Pour l'image dev :
 
-Vous pouvez à tout moment la modifier avec les commandes de l'image parente.
+ ```docker build -t  ninapepite/windowsadmincenter-dev .```
+ 
+ Pour l'image persistant :
+ 
+  ```docker build -t  ninapepite/windowsadmincenter .```
+ 
+Ces images ont étaient construites depuis l'image mcr.microsoft.com/windows/servercore:ltsc2019.
+Vous pouvez à tout moment les modifier avec les commandes de l'image parente.
 
 # Variables disponibles
 
@@ -30,7 +29,17 @@ wacpassword = password
 
  # Exemple d'utilisation
  
+ Version dev :
+ 
  ```docker run -d -p 443:443 -e wacuser=Ninapepite -e wacpassword=Azerty123@ ninapepite/windowsadmincenter ```
  
  Rendez-vous sur https://localhost:443 pour accéder à votre conteneur avec vos identifiants.
+ 
+ Version persistant :
+ 
+ ```docker run -it --dns 192.168.1.10 -p 443:443 -v c:\config:"C:\ProgramData\Server Management Experien
+ce" -e wacuser=Ninapepite -e wacpassword=Azerty123@ -v c:\data:c:\WaC ninapepite/windowsadmincenter ```
+
+ ```docker run -d --dns 192.168.1.10 -p 443:443 -v c:\config:"C:\ProgramData\Server Management Experien
+ce" -e wacuser=Ninapepite -e wacpassword=Azerty123@ -v c:\data:c:\WaC --restart unless-stopped ninapepite/windowsadmincenter ```
 
