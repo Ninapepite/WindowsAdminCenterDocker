@@ -23,6 +23,14 @@ $Accountsvc = @{
     StartupType = "Manual"
     Description = "Gérer le compte d'usurpation d'identité demandé par le service Windows Admin Center."
 }
+function Checkup {
+    while ($true)
+    {
+        Get-EventLog -LogName Microsoft-ServerManagementExperience -After $CheckPoint | Select-Object TimeGenerated, EntryType, Message
+        $CheckPoint = Get-Date
+        Start-Sleep -Seconds 2
+    }
+}
 #$Monitor = {
 #    $CheckPoint = (Get-Date).AddSeconds(-2)
     #Check up continue des évenements de Windows Admin Center
@@ -53,12 +61,8 @@ if ($CheckInstall.Count -eq "0")
     Remove-Item -Force 'c:\log.txt'
     $CheckPoint = (Get-Date).AddSeconds(-2)
     #Check up continue des évenements de Windows Admin Center
-    while ($true)
-    {
-        Get-EventLog -LogName Microsoft-ServerManagementExperience -After $CheckPoint | Select-Object TimeGenerated, EntryType, Message
-        $CheckPoint = Get-Date
-        Start-Sleep -Seconds 2
-    }
+    Checkup
+
 }
 else
 {
@@ -76,12 +80,7 @@ else
         Restart-Service -Name ServerManagementGateway
         $CheckPoint = (Get-Date).AddSeconds(-2)
         #Check up continue des évenements de Windows Admin Center
-        while ($true)
-        {
-            Get-EventLog -LogName Microsoft-ServerManagementExperience -After $CheckPoint | Select-Object TimeGenerated, EntryType, Message
-            $CheckPoint = Get-Date
-            Start-Sleep -Seconds 2
-        }
+        Checkup
     }
     elseif ($ServiceState -eq "Stopeed") {
         Reg import c:\wac\software.reg
@@ -94,12 +93,7 @@ else
         Restart-Service -Name ServerManagementGateway
         $CheckPoint = (Get-Date).AddSeconds(-2)
         #Check up continue des évenements de Windows Admin Center
-        while ($true)
-        {
-            Get-EventLog -LogName Microsoft-ServerManagementExperience -After $CheckPoint | Select-Object TimeGenerated, EntryType, Message
-            $CheckPoint = Get-Date
-            Start-Sleep -Seconds 2
-        }
+        Checkup
     }
     else {
         Reg import c:\wac\software.reg
@@ -111,12 +105,7 @@ else
         Restart-Service -Name ServerManagementGateway
         $CheckPoint = (Get-Date).AddSeconds(-2)
         #Check up continue des évenements de Windows Admin Center
-        while ($true)
-        {
-            Get-EventLog -LogName Microsoft-ServerManagementExperience -After $CheckPoint | Select-Object TimeGenerated, EntryType, Message
-            $CheckPoint = Get-Date
-            Start-Sleep -Seconds 2
-        }
+        Checkup
 
     }
 
