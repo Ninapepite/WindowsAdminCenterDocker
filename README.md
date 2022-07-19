@@ -10,13 +10,13 @@ Pour plus d'informations sur chaque version merci de vous référer aux releases
 
 ## Construire l'image
 
-**Version dev :**
+### Version dev
 
 [Release](https://github.com/Ninapepite/WindowsAdminCenterDocker/releases/tag/Dev)
 
  ```docker build -t  ninapepite/windowsadmincenter:dev .```
  
- **Version stable :**
+ ### Version stable
  
  [Release](https://github.com/Ninapepite/WindowsAdminCenterDocker/releases/tag/Stable)
  
@@ -38,13 +38,13 @@ Elles permettent de créer un compte Administrateur.
 
  ## Exemples d'utilisation
  
- **Version dev :**
+ ### Version dev
  
  ```docker run -d -p 443:443 -e wacuser=Admin1 -e wacpassword=P@$$word ninapepite/windowsadmincenter:dev ```
  
  Rendez-vous sur https://localhost:443 pour accéder à votre conteneur avec vos identifiants.
  
- **Version stable :**
+ ### Version stable
  
  Le volume 'Config' stock les fichiers de l'interface web et des modules.
  
