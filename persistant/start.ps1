@@ -9,7 +9,7 @@ param(
 )
 #Mise en place d'un mot de passe pour sauvegarder le certificat
 $certpass = ConvertTo-SecureString -String "Certpass" -Force -AsPlainText
-#Création de paramètres pour la création de service
+#Création des paramètres pour la création de service
 $Gatewaysvc = @{
     Name = "ServerManagementGateway"
     BinaryPathName = '"C:\WaC\sme.exe"'
@@ -25,7 +25,7 @@ $Accountsvc = @{
     StartupType = "Manual"
     Description = "Gérer le compte d'usurpation d'identité demandé par le service Windows Admin Center."
 }
-#Déclaration d'un fonction qui permet de vérifier les logs de windows admin center
+#Déclaration d'une fonction qui permet de vérifier les logs de windows admin center
 function Checkup {
     while ($true)
     {
@@ -34,7 +34,7 @@ function Checkup {
         Start-Sleep -Seconds 2
     }
 }
-#Ajout de l'utilisateu
+#Ajout de l'utilisateur
 .\users -username $wac_user -password $wac_password -Verbose
 #Variable pour vérifier le dossier de l'installation
 $CheckInstall = Get-ChildItem C:\WaC
