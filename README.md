@@ -38,8 +38,8 @@ wacpassword = password
  
  Version persistant :
  
- ```docker run -it --dns 192.168.1.10 -p 443:443 -v c:\config:"C:\ProgramData\Server Management Experience" -e wacuser=Ninapepite -e wacpassword=Azerty123@ -v c:\data:c:\WaC ninapepite/windowsadmincenter```
+ ```docker run -it -p 443:443 -v c:\config:"C:\ProgramData\Server Management Experience" -e wacuser=Ninapepite -e wacpassword=Azerty123@ -v c:\data:c:\WaC ninapepite/windowsadmincenter```
 
 
- ```docker run -d --dns 192.168.1.10 -p 443:443 -v c:\config:"C:\ProgramData\Server Management Experience" -e wacuser=Ninapepite -e wacpassword=Azerty123@ -v c:\data:c:\WaC --restart unless-stopped ninapepite/windowsadmincenter```
+ ```docker run -d -p 443:443 -v c:\config:"C:\ProgramData\Server Management Experience" -e wacuser=Ninapepite -e wacpassword=Azerty123@ -v c:\data:c:\WaC --restart unless-stopped --name wac ninapepite/windowsadmincenter```
 
