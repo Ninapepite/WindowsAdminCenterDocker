@@ -31,19 +31,10 @@ function Checkup {
         Start-Sleep -Seconds 2
     }
 }
-#$Monitor = {
-#    $CheckPoint = (Get-Date).AddSeconds(-2)
-    #Check up continue des évenements de Windows Admin Center
-#    while ($true)
-#    {
-#        Get-EventLog -LogName Microsoft-ServerManagementExperience -After $CheckPoint | Select-Object TimeGenerated, EntryType, Message
-#        $CheckPoint = Get-Date
-#        Start-Sleep -Seconds 2
-#    }
-#}
-
 .\users -username $wac_user -password $wac_password -Verbose
+
 $CheckInstall = Get-ChildItem C:\WaC
+
 if ($CheckInstall.Count -eq "0")
 {
     Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/p/?linkid=2194936' -OutFile 'c:\wac.msi'
