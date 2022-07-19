@@ -6,7 +6,7 @@ La version placée dans le dossier Dev permet de lancer WaC en peu de temps mais
 
 La version placée dans le dossier persistant vous permet de déployer WaC en hébergant votre configuration dans vos volumes sur l'hôte.
 
-Pour plus d'informations sur chaques version merci de vos référer aux releases
+Pour plus d'informations sur chaque version merci de vous référer aux releases
 
 # Construire l'image
 
