@@ -10,7 +10,7 @@ La version placée dans le dossier persistant vous permet de déployer WaC en h�
 
 Pour l'image dev :
 
- ```docker build -t  ninapepite/windowsadmincenter-dev .```
+ ```docker build -t  ninapepite/windowsadmincenter:dev .```
  
  Pour l'image persistant :
  
@@ -32,7 +32,7 @@ wacpassword = password
  
  Version dev :
  
- ```docker run -d -p 443:443 -e wacuser=Ninapepite -e wacpassword=Azerty123@ ninapepite/windowsadmincenter ```
+ ```docker run -d -p 443:443 -e wacuser=Ninapepite -e wacpassword=Azerty123@ ninapepite/windowsadmincenter:dev ```
  
  Rendez-vous sur https://localhost:443 pour accéder à votre conteneur avec vos identifiants.
  
