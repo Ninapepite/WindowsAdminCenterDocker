@@ -46,9 +46,11 @@ Elles permettent de créer un compte Administrateur.
  
  ### Version stable
  
- Le volume 'Config' stock les fichiers de l'interface web et des modules.
+Executer la commande docker run avec Powershell pour faciliter la gestion des volumes.
+
+Le volume 'Config' stock les fichiers de l'interface web et des modules.
  
- Le volume 'Data' stock les fichiers du programme.
+Le volume 'Data' stock les fichiers du programme.
  
  ```docker run -it -p 443:443 -v c:\config:"C:\ProgramData\Server Management Experience" wacuser=Admin1 -e wacpassword=P@$$word -v c:\data:c:\WaC ninapepite/windowsadmincenter```
 
