@@ -40,7 +40,7 @@ Elles permettent de créer un compte Administrateur.
  
  ### Version dev
  
- ```docker run -d -p 443:443 -e wacuser=Admin1 -e wacpassword=P@$$word ninapepite/windowsadmincenter:dev ```
+ ```docker run -d -p 443:443 -e wacuser=Admin1 -e wacpassword="P@$$word" ninapepite/windowsadmincenter:dev ```
  
  Rendez-vous sur https://localhost:443 pour accéder à votre conteneur avec vos identifiants.
  
@@ -52,10 +52,10 @@ Le volume 'Config' stock les fichiers de l'interface web et des modules.
  
 Le volume 'Data' stock les fichiers du programme.
  
- ```docker run -it -p 443:443 -v c:\config:"C:\ProgramData\Server Management Experience" wacuser=Admin1 -e wacpassword=P@$$word -v c:\data:c:\WaC ninapepite/windowsadmincenter```
+ ```docker run -it -p 443:443 -v c:\config:"C:\ProgramData\Server Management Experience" wacuser=Admin1 -e wacpassword="P@$$word" -v c:\data:c:\WaC ninapepite/windowsadmincenter```
 
 
- ```docker run -d -p 443:443 -v c:\config:"C:\ProgramData\Server Management Experience" wacuser=Admin1 -e wacpassword=P@$$word -v c:\data:c:\WaC --restart unless-stopped --name wac ninapepite/windowsadmincenter```
+ ```docker run -d -p 443:443 -v c:\config:"C:\ProgramData\Server Management Experience" wacuser=Admin1 -e wacpassword="P@$$word" -v c:\data:c:\WaC --restart unless-stopped --name wac ninapepite/windowsadmincenter```
 
 
  Rendez-vous sur https://localhost:443 pour accéder à votre conteneur avec vos identifiants.
